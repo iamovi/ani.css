@@ -1,7 +1,9 @@
-/* hey hello */
-
+html {
+  overflow: hidden;
+}
 /* ani-btn-a */
 .ani-btn-a {
+  font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     padding: 20px;
@@ -91,56 +93,79 @@
 
 /* ani-btn-d */
 .ani-btn-d {
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    color: black;
-    background-color: orange;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: background-color 0.3s, transform 0.2s;
-  }
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border: none;
+  transition: 0.3s all ease;
+}
+.ani-btn-d:hover {
+  animation: text-animation 5s infinite linear;
+  background-color: black;
+}
 
-  .ani-btn-d:hover {
-    background-color: #2980b9;
-  }
+.ani-btn-d::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: border-animation 2s infinite linear;
+}
 
-  .ani-btn-d::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #fff 0%, #fff 10%, transparent 20%, transparent 100%);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
+@keyframes border-animation {
+  0% {
+      border-color: #f00;
+      width: 0;
+      height: 0;
   }
+  25% {
+      border-color: #0f0;
+      width: 100%;
+      height: 0;
+  }
+  50% {
+      border-color: #00f;
+      width: 100%;
+      height: 100%;
+  }
+  75% {
+      border-color: #ff0;
+      width: 0;
+      height: 100%;
+  }
+  100% {
+      border-color: #f00;
+      width: 0;
+      height: 0;
+  }
+}
+@keyframes text-animation {
+  0% {
+      color: #f00;
+  }
+  25% {
+      color: #0f0;
 
-  .ani-btn-d:hover::before {
-    opacity: 1;
-    transform: scale(2);
   }
+  50% {
+      color: #00f;
 
-  .ani-btn-d::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    transform: translateX(-100%);
-    transition: transform 0.3s;
-    mix-blend-mode: overlay;
   }
+  75% {
+      color: #ff0;
+  }
+  100% {
+      color: #f00;
+
+  }
+}
 
 
 /* ani-btn-e */
@@ -178,3 +203,1588 @@
 .ani-btn-e:hover {
   color: #3498db;
 }
+
+/* ani-btn-f */
+@keyframes f-butterflyEffect {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotate(12deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(-12deg);
+  }
+}
+
+.ani-btn-f {
+  position: relative;
+  border-radius: 3px;
+  animation: f-butterflyEffect 7s infinite;
+  background: linear-gradient(45deg, #FF8C00, #FFD700, #FF8C00, #FFD700); /* Gradient with multiple colors */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s; /* Add transition effect */
+}
+
+.ani-btn-f:hover {
+  background: linear-gradient(45deg, #FFD700, #FF8C00, #FFD700, #FF8C00); /* Change gradient on hover */
+}
+
+.ani-btn-f::before {
+  content: "\1F681"; /* Unicode for helicopter emoji 🚁 */
+  font-size: 30px;
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ani-btn-g */
+@keyframes g-rgbAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ani-btn-g {
+  background: linear-gradient(45deg, #f06, #9f6, #06f, #f06); /* RGB gradient colors */
+  background-size: 400% 400%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  animation: g-rgbAnimation 5s infinite; /* RGB animation duration */
+  transition: background 0.3s, box-shadow 0.3s; /* Add transition for box-shadow */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add a subtle glow effect */
+}
+
+.ani-btn-g:hover {
+  background: linear-gradient(45deg, #f06, #9f6, #06f, #f06); /* Maintain gradient colors on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Increase glow effect on hover */
+}
+
+
+/* ani-btn-h */
+@keyframes h-floatAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.ani-btn-h {
+  background: rgba(0, 0, 0, 0.1); /* Dark background for frosted glass effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  color: black; /* Text color */
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+}
+
+.ani-btn-h:hover {
+  background: rgba(0, 0, 0, 0.2); /* Increase opacity on hover */
+  color: #f06; /* Change text color on hover */
+  animation: h-floatAnimation 0.5s ease-in-out; /* Add floating animation on hover */
+}
+
+
+/* ani-btn-i */
+/* advance-pulse-button.css */
+@keyframes i-pulseAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.ani-btn-i {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b, #6ad6f0, #a1c9f1); /* Vibrant multicolor gradient background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+  position: relative;
+  overflow: hidden;
+}
+
+.ani-btn-i::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #6ad6f0, #a1c9f1); /* Gradient overlay for 3D effect */
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.ani-btn-i:hover {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b, #6ad6f0, #a1c9f1); /* Vibrant multicolor gradient for hover state */
+  color: #fff; /* Change text color on hover */
+  animation: i-pulseAnimation 0.2s ease-in-out; /* Add pulse animation on hover */
+}
+
+
+/* ani-btn-j */
+@keyframes rotateFlowers {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes j-textAnimation {
+  0% {
+    color: rgb(0, 0, 0);
+  }
+  50% {
+    color: purple; /* Change to the desired RGB color */
+  }
+  100% {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.ani-btn-j {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-flowers.jpeg?updatedAt=1701600079522') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 250px;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 0.5px solid black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+
+.ani-btn-j:hover {
+  background-size: 100%;
+  animation: j-textAnimation 1s ease-in-out infinite; /* Add text color animation on hover */
+}
+
+
+/* ani-btn-k */
+
+.ani-btn-k {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-cyberpunklady.jpg?updatedAt=1701600213268') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 3px;
+  color: black;
+  font-weight: bold;
+  padding: 20px 25px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+.ani-btn-k:hover {
+  background-size: 130%;
+  opacity: 0.8;
+  color: red;
+}
+
+/* ani-btn-l */
+.ani-btn-l {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-vc.jpeg?updatedAt=1701600360994') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 1.5px;
+  color: white;
+  font-weight: bold;
+  padding: 28px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+
+/* ani-btn-m */
+.ani-btn-m {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-skeleton.gif?updatedAt=1701600499525') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 1.5px;
+  color: white;
+  font-weight: bold;
+  padding: 20px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+.ani-btn-m:hover {
+  background-size: 140%;
+  color: red;
+}
+
+
+/* ani-btn-n */
+.ani-btn-n {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-ohno.gif?updatedAt=1701600600750') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 3px;
+  color: black;
+  font-weight: bold;
+  padding: 20px 22px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+animation: n-textAnimation 5s ease-in-out infinite;
+}
+@keyframes n-textAnimation {
+  0% {
+    color: white;
+  }
+  50% {
+    color: black; /* Change to the desired RGB color */
+  }
+  100% {
+    color: white;
+  }
+}
+
+/* ani-btn-o */
+.ani-btn-o {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-uwu.jpg?updatedAt=1701600660004') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 1.5px;
+  color: white;
+  font-weight: bold;
+  padding: 23px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+.ani-btn-o:hover {
+  background-size: 140%;
+  color: red;
+}
+
+/* ani-btn-p */
+/* diagonal-split-button.css */
+@keyframes p-bounceAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ani-btn-p {
+  position: relative;
+  background: linear-gradient(45deg, #3498db 50%, #2ecc71 50%); /* Diagonal split background */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+}
+
+.ani-btn-p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(45deg, #e74c3c 50%, #f39c12 50%); /* Diagonal split overlay */
+  transform: translateX(-50%); /* Adjust to control the split position */
+  z-index: -1;
+  transition: transform 0.3s; /* Add transition for split movement */
+}
+
+.ani-btn-p:hover::before {
+  transform: translateX(0); /* Move the split overlay on hover */
+}
+
+.ani-btn-p:hover {
+  color: #333; /* Change text color on hover */
+  animation: p-bounceAnimation 0.3s ease-in-out; /* Add bounce animation on hover */
+}
+
+/* ani-btn-q */
+/* water-effect-button.css */
+@keyframes q-rippleAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.ani-btn-q {
+  position: relative;
+  background: #3498db; /* Background color */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+}
+
+.ani-btn-q::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  animation: q-rippleAnimation 2.5s linear infinite; /* Make ripple animation continuous */
+}
+
+
+/* ani-btn-r*/
+/* enhanced-fire-button.css */
+@keyframes r-fireAnimation {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.6); /* Subtle glow effect */
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.1) translateX(5px); /* Add slight wavy motion */
+  }
+  100% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 20px rgba(255, 126, 95, 0.8); /* Increased glow effect */
+    transform: scaleY(1);
+  }
+}
+
+.ani-btn-r {
+  position: relative;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Fire gradient background */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+  background-size: 200% 100%;
+  animation: r-fireAnimation 2s linear infinite alternate; /* Adjusted fire animation with wavy motion */
+}
+
+.ani-btn-r:hover {
+  color: #333; /* Change text color on hover */
+  animation: none; /* Disable fire animation on hover */
+  font-weight: bold;
+}
+
+
+/* ani-btn-s */
+/* enhanced-starry-button.css */
+@keyframes s-twinklingAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 100%;
+  }
+}
+
+@keyframes s-starAnimation {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Add glow effect */
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.4;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Increase glow effect */
+  }
+}
+
+.ani-btn-s {
+  position: relative;
+  background: linear-gradient(45deg, #3498db, #2ecc71); /* Gradient background */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+  background-size: 300% 300%;
+  animation: s-twinklingAnimation 3s linear infinite alternate; /* Adjusted twinkling animation */
+}
+
+.ani-btn-s::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 4 4"><circle cx="2" cy="2" r="2" fill="white"/></svg>'); /* SVG circle as star */
+  background-size: 50px 50px; /* Size of the star */
+  pointer-events: none;
+  opacity: 0.8;
+  animation: s-starAnimation 2s linear infinite alternate; /* Adjusted star animation with glow */
+}
+
+.ani-btn-s:hover {
+  color: #333; /* Change text color on hover */
+  animation: none; /* Disable twinkling animation on hover */
+}
+
+
+/* ani-btn-t */
+/* spinning-earth-button.css */
+@keyframes t-earthRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ani-btn-t {
+  position: relative;
+  background: linear-gradient(45deg, #3498db, #2ecc71); /* Gradient background */
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s; /* Add transition for background and color */
+  border-radius: 5px;
+}
+
+.ani-btn-t::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-image: url('https://ik.imagekit.io/iamovi/project-ani/ani-earth.png?updatedAt=1701600935322'); /* Replace with the Earth image URL or use a local image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  animation: t-earthRotation 3s linear infinite; /* Spinning Earth animation */
+}
+
+
+.ani-btn-t:hover {
+  color: #333; /* Change text color on hover */
+}
+
+
+/* ani-btn-u */
+.ani-btn-u {
+  padding: 12px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: bold;
+  border-bottom: 0.5px solid #3498db;
+  border-right: 0.5px solid #3498db;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+  transition: 0.1s all ease;
+  z-index: 1; /* Ensure text is above pseudo-element */
+}
+.ani-btn-u:hover {
+  color: black;
+}
+
+.ani-btn-u::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #3498db, #2980b9);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1; /* Move pseudo-element below the text */
+}
+
+.ani-btn-u:hover::before {
+  transform: translateY(0);
+}
+
+
+
+/* ani-btn-v */
+.ani-btn-v {
+  position: relative;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: lightblue;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease; /* add a transition effect */
+}
+
+.ani-btn-v::before,
+.ani-btn-v::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.ani-btn-v::before {
+  top: 0;
+  left: -10px;
+  border-width: 0 10px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+.ani-btn-v::after {
+  bottom: 0;
+  right: -10px;
+  border-width: 10px 0 0 10px;
+  border-color: transparent transparent transparent black;
+}
+
+.ani-btn-v:hover {
+  background-color: black; /* change the background color on hover */
+  color: lightblue; /* change the text color on hover */
+  border-color: lightblue; /* change the border color on hover */
+}
+
+.ani-btn-v:hover::before {
+  border-color: transparent lightblue transparent transparent; /* change the border color of the left triangle on hover */
+}
+
+.ani-btn-v:hover::after {
+  border-color: transparent transparent transparent lightblue; /* change the border color of the right triangle on hover */
+}
+
+
+
+/* ani-btn-w */
+/* enhanced-air-wave-button-with-hover-emoji-and-new-background.css */
+@keyframes w-airWaveAnimation {
+  0% {
+    transform: translateX(0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    transform: translateX(15px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: translateX(0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ani-btn-w {
+  position: relative;
+  background: linear-gradient(45deg, #6a89cc, #82ccdd);
+  background-size: 200% 200%;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s, border 0.3s, transform 0.3s;
+  border-radius: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  animation: w-airWaveAnimation 3s linear infinite alternate, gradientAnimation 4s ease infinite;
+}
+
+.ani-btn-w:hover {
+  color: #333;
+  border-color: #fff;
+  transform: scale(1.02);
+}
+
+.ani-btn-w:hover::before {
+  opacity: 0.3;
+}
+
+
+
+/* ani-btn-x */
+/* visible-text-purple-border-fill-button.css */
+.ani-btn-x {
+  position: relative;
+  background: none; /* Transparent background */
+  color: Purple; /* Default text color */
+  padding: 16px 20px;
+  border: 2px solid #8e44ad; /* Purple border */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.ani-btn-x::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #8e44ad; /* Purple color */
+  transition: left 0.3s; /* Smooth transition for fill effect */
+  z-index: -1; /* Move the pseudo-element behind the text */
+}
+
+.ani-btn-x:hover::before {
+  left: 0; /* Fill from left to right on hover */
+  transition: left 0.3s; /* Smooth transition on hover */
+}
+
+.ani-btn-x:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+
+/* ani-btn-y */
+/* further-enhanced-dark-iridescent-shimmer-button-y.css */
+@keyframes y-iridescentShimmer {
+  0% {
+    background-position: -500% 0%;
+  }
+  100% {
+    background-position: 500% 0%;
+  }
+}
+
+.ani-btn-y {
+  background: linear-gradient(45deg, #2c3e50, #34495e, #7f8c8d, #4b4b4b, #2c3e50); /* Dark gradient background */
+  color: #fff;
+  padding: 15px 20px;
+  border: 2px solid #95a5a6; /* Subtle border */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  background-size: 500% 500%;
+  animation: y-iridescentShimmer 4s linear infinite; /* Shimmering animation */
+  transition: background 0.5s, color 0.5s, border 0.5s, box-shadow 0.3s; /* Smooth transitions on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for lifted effect */
+}
+
+.ani-btn-y:hover {
+  color: #fff; /* Change text color on hover */
+  background: linear-gradient(45deg, #2c3e50, #34495e, #7f8c8d, #4b4b4b, #2c3e50); /* Dark gradient background on hover */
+  border-color: #bdc3c7; /* Adjust border color on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* ani-btn-z */
+/* super-enhanced-cosmic-hero-button-z.css */
+@keyframes cosmicAnimation {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.ani-btn-z {
+  background: linear-gradient(45deg, #4e54c8, #8f94fb, #4e54c8, #8f94fb); /* Cosmic gradient background */
+  background-size: 400% 400%;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: cosmicAnimation 8s ease-in-out infinite; /* Nebula-like animation with delay */
+  transition: box-shadow 0.3s, filter 0.3s; /* Smooth transitions for box-shadow and filter on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.ani-btn-z:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover for depth */
+  filter: brightness(1.2); /* Subtle glow effect on hover */
+}
+
+
+
+
+/* ani-btn-extra */
+/* new-iridescent-shimmer-button-y.css */
+@keyframes iridescentShimmer {
+  0% {
+    background-position: 500% 0%;
+  }
+  100% {
+    background-position: -500% 0%;
+  }
+}
+
+.ani-btn-extra {
+  background: linear-gradient(45deg, #3498db, #9b59b6, #1abc9c, #e67e22, #e74c3c); /* New gradient background */
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  background-size: 500% 500%;
+  animation: iridescentShimmer 4s linear infinite; /* Shimmering animation */
+}
+
+.ani-btn-extra:hover {
+  color: #fff; /* Change text color on hover */
+  animation: iridescentShimmer 15s linear infinite;
+}
+
+
+/* ani-btn-matrix */
+.ani-btn-matrix {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-matrix.gif?updatedAt=1701602838330') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+
+/* ani-btn-rainbow */
+.ani-btn-rainbow {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-rainbow.gif?updatedAt=1701603106378') no-repeat; /* Use the image as a repeating pattern */
+  background-size: 100%;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+/* ani-btn-poop */
+.ani-btn-poop {
+  position: relative;
+  opacity: 0.7;
+  background: url('https://ik.imagekit.io/iamovi/project-ani/ani-poop.gif?updatedAt=1701603677014') no-repeat; /* Use the image as a repeating pattern */
+  width: 155px; /* Set a specific width for the button */
+  height: 65px; /* Set a specific height for the button */
+  background-size: 100% 100%; 
+  border-radius: 3px;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s; /* Remove color transition from here */
+  overflow: hidden;
+}
+
+/* ani-btn-nothing */
+.ani-btn-nothing {
+  display: none;
+}
+
+/******************************************************************************************************************************************************* ------------ XXX ---------- ***************************************************************************************************************************************************************/
+
+/* ani-txt-a */
+@keyframes bounceAnimation {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.ani-txt-a {
+  animation: bounceAnimation 2s ease-in-out forwards;
+}
+
+/* ani-txt-b */
+.ani-txt-b {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* ani-txt-c */
+.ani-txt-c {
+  opacity: 0;
+  transform: translateX(-50px); /* Start off-screen to the left */
+  animation: slideIn 0.1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ani-txt-d */
+.ani-txt-d {
+  opacity: 0;
+  transform: scale(0.5); /* Start with 50% scale */
+  animation: scaleIn 1.5s ease-in-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ani-txt-e */
+.ani-txt-e {
+  opacity: 0;
+  transform-origin: top left; /* Set the rotation origin to the top-left corner */
+  transform: rotate(-45deg) translateX(-50%); /* Start with a 45-degree rotation and shift to the left */
+  animation: rotateIn 1.5s ease-in-out forwards;
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-45deg) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) translateX(0);
+  }
+}
+
+
+
+/* ani-txt-f */
+@keyframes colorChangeAnimation {
+    0% {
+        color: #ff5733; /* Initial color */
+    }
+    20% {
+        color: #33ff57; /* First color transition */
+    }
+    40% {
+        color: #5733ff; /* Second color transition */
+    }
+    60% {
+        color: #ff33a1; /* Third color transition */
+    }
+    80% {
+        color: #33a1ff; /* Fourth color transition */
+    }
+    100% {
+        color: #ff5733; /* Final color */
+    }
+}
+
+.ani-txt-f {
+    animation: colorChangeAnimation 8s infinite linear;
+}
+
+/* ani-txt-g */
+.ani-txt-g {
+  opacity: 0;
+  transform: translateX(50px); /* Start off-screen to the right */
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/* ani-txt-h */
+@keyframes aestheticColorAnimation {
+    0%, 100% {
+        color: #ff6f61;
+        text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61; /* Initial and final color with text-shadow */
+    }
+    10% {
+        color: #61ff6f;
+        text-shadow: 0 0 10px #61ff6f, 0 0 20px #61ff6f, 0 0 30px #61ff6f; /* First color transition and text-shadow */
+    }
+    30% {
+        color: #6f61ff;
+        text-shadow: 0 0 10px #6f61ff, 0 0 20px #6f61ff, 0 0 30px #6f61ff; /* Second color transition and text-shadow */
+    }
+    50% {
+        color: #ff61f1;
+        text-shadow: 0 0 10px #ff61f1, 0 0 20px #ff61f1, 0 0 30px #ff61f1; /* Third color transition and text-shadow */
+    }
+    70% {
+        color: #61f1ff;
+        text-shadow: 0 0 10px #61f1ff, 0 0 20px #61f1ff, 0 0 30px #61f1ff; /* Fourth color transition and text-shadow */
+    }
+    90% {
+        color: #fff16f;
+        text-shadow: 0 0 10px #fff16f, 0 0 20px #fff16f, 0 0 30px #fff16f; /* Fifth color transition and text-shadow */
+    }
+}
+
+.ani-txt-h {
+    animation: aestheticColorAnimation 6s infinite;
+}
+
+/* ani-txt-i */
+@keyframes enhancedAnimation {
+  0%, 100%  {
+    transform: scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: scaleX(-1) scaleY(1.1);
+  }
+
+}
+
+.ani-txt-i {
+  animation: enhancedAnimation 4s ease-in-out forwards; /* Set iteration count to 1 */
+}
+
+
+/* ani-txt-j */
+@keyframes pulsateAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.ani-txt-j {
+  animation: pulsateAnimation 3s ease-in-out infinite; /* Set iteration count to infinite for pulsating effect */
+}
+
+
+/* ani-txt-h */
+@keyframes advancedAnimation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.ani-txt-h {
+  animation: advancedAnimation 2s linear forwards; /* Adjust duration and timing function as needed */
+}
+
+/* ani-txt-h */
+@keyframes orbitAnimation {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(100px) rotate(-360deg);
+  }
+}
+
+.ani-txt-i {
+  animation: orbitAnimation 6s linear infinite; /* Adjust duration and timing function as needed */
+}
+
+
+
+/* ani-txt-j */
+@keyframes complexAnimation {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2) translateY(-30px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.2) translateY(30px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.ani-txt-j {
+  animation: complexAnimation 3s linear forwards; /* Adjust duration and timing function as needed */
+}
+
+
+
+/* ani-txt-k */
+@keyframes fallInPlaceAnimation {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ani-txt-k {
+  animation: fallInPlaceAnimation 0.5s ease-out forwards; /* Adjust duration and timing function as needed */
+}
+
+
+  /* ani-txt-l */
+  @keyframes spinAndSettleAnimation {
+      0% {
+        transform: rotate(360deg) scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+    }
+    
+    .ani-txt-l {
+      animation: spinAndSettleAnimation 4s ease-out forwards; /* Adjust duration and timing function as needed */
+    }
+
+    
+
+  /* ani-txt-m */
+    @keyframes stretchSquashAnimation {
+      0%, 100% {
+        transform: scaleY(1);
+      }
+      50% {
+        transform: scaleY(1.5);
+      }
+    }
+    
+    .ani-txt-m {
+      animation: stretchSquashAnimation 3s ease-in-out infinite; /* Adjust duration and timing function as needed */
+    }
+    
+/* ani-txt-n */
+@keyframes rocketEntranceAnimation {
+  0% {
+    transform: translateY(100vh) scaleY(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) scaleY(1.05);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.ani-txt-n {
+  animation: rocketEntranceAnimation 0.3s ease-out forwards;
+}
+
+
+/* ani-txt-o */
+/* ani-txt-o - Extraordinary Animation */
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+
+.ani-txt-o {
+  animation: waveAnimation 2s ease-in-out infinite;
+}
+ 
+
+/* ani-txt-p - Advanced Animation */
+@keyframes advancedTextAnimation {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(0);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2) translateY(-30px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.2) translateY(30px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.ani-txt-p {
+  animation: advancedTextAnimation 5s ease-in-out forwards;
+}
+
+
+/* ani-txt-q - Advanced Animation */
+@keyframes circularMotionAnimation {
+  0% {
+    transform: rotate(0deg) translateX(100px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(180deg) translateX(-100px) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+.ani-txt-q {
+  animation: circularMotionAnimation 5s ease-in-out forwards;
+}
+
+
+/* ani-txt-r - Advanced Animation */
+@keyframes emergeFromRightAnimation {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+}
+
+.ani-txt-r {
+  animation: emergeFromRightAnimation 1s ease-in-out forwards;
+}
+
+/* ani-txt-s - Advanced Animation */
+@keyframes spiralEntranceAnimation {
+  0% {
+    transform: rotate(180deg) translateX(200px) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(90deg) translateX(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.ani-txt-s {
+  animation: spiralEntranceAnimation 4s ease-in-out forwards;
+}
+
+/* ani-txt-t - Advanced Animation */
+@keyframes zoomInFromTopAnimation {
+  0% {
+    transform: translateY(-100%) rotate(-180deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0) rotate(0deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.ani-txt-t {
+  animation: zoomInFromTopAnimation 3s ease-in-out forwards;
+}
+
+
+/* ani-txt-u - Advanced Animation */
+@keyframes flipAndUnfoldAnimation {
+  0% {
+    transform: rotateX(-180deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(0deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.ani-txt-u {
+  animation: flipAndUnfoldAnimation 2s ease-in-out forwards;
+}
+
+
+/* ani-txt-v - Advanced Animation */
+@keyframes bounceInFromTopAnimation {
+  0% {
+    transform: translateY(-100%) scaleY(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) scaleY(1.2);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0) scaleY(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+  }
+}
+
+.ani-txt-v {
+  animation: bounceInFromTopAnimation 3s ease-in-out forwards;
+}
+
+
+/* ani-txt-w - Advanced Animation */
+@keyframes bouncingWaveAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ani-txt-w {
+  animation: bouncingWaveAnimation 3s ease-in-out forwards;
+}
+
+/* ani-txt-x - Advanced Animation */
+/* ani-txt-z - Advanced Animation */
+@keyframes bookUnfoldAnimation {
+  0% {
+    transform: skewX(-45deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: skewX(0deg) scale(1.2);
+    opacity: 1;
+  }
+  70% {
+    transform: skewX(-45deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+      transform: skewX(0deg) scale(1.2);
+      opacity: 1;
+    }
+}
+
+.ani-txt-x {
+  animation: bookUnfoldAnimation 3s ease-in-out forwards;
+}
+
+
+/* ani-txt-y - Advanced Animation */
+/* ani-txt-y - Enhanced Animation */
+@keyframes swingAndBounceAnimation {
+  0% {
+    transform: rotate(-45deg) translateY(-100px) scaleX(1.5);
+    opacity: 0;
+  }
+  30% {
+    transform: rotate(0deg) translateY(20px) scaleX(1.1);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(0deg) translateY(0) scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translateY(0) scaleX(1);
+    opacity: 1;
+  }
+}
+
+.ani-txt-y {
+  animation: swingAndBounceAnimation 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+
+/* ani-txt-z - Advanced Animation */
+/* ani-txt-z - Enhanced Animation */
+@keyframes awesomeSpinAndZoomAnimation {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  30% {
+    transform: rotate(360deg) scale(1.2) translateY(-20px);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(360deg) scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.ani-txt-z {
+  animation: awesomeSpinAndZoomAnimation 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+
+/* ani-txt-extra - Advanced Animation */
+/* ani-txt-extra - Bold Blast Animation */
+@keyframes boldBlastAnimation {
+  0% {
+    font-weight: normal;
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    font-weight: bold;
+    transform: scale(1.5) rotate(180deg) translateY(-20px);
+    opacity: 0.8;
+  }
+  50% {
+    font-weight: normal;
+    transform: scale(0.8) rotate(360deg) translateY(0);
+    opacity: 1;
+  }
+  75% {
+    font-weight: bold;
+    transform: scale(1.2) rotate(180deg) translateY(-500px);
+    opacity: 0.8;
+  }
+  100% {
+    font-weight: normal;
+    transform: scale(1) rotate(0deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+.ani-txt-extra {
+  animation: boldBlastAnimation 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+/***********
+THE END *********/
