@@ -19,17 +19,48 @@ You can include ani.css in your project by adding the following link to your HTM
 ```html
 <h2 class="ani-txt-a">Hello, world!</h2>
 ```
+---
+
 class starts from a and ends at z for button:
 Like ani-btn-a, ani-btn-b, ani-btn-c ..............blah blah, ani-btn-z
 
 class starts from a and ends at z for text as well:
 Like ani-txt-a, ani-txt-b, ani-txt-c ..............blah blah, ani-txt-z
 
+Also has extra animations and effects!
+
 ---
 
 Explore the [ani.css website]() for a full list of available animations and effects.
 
+---
+## Quick Start
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ani.css</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.0/dist/ani.min.css">
+    <style>
+        h2 {
+            margin-top: 10%;
+            text-align: center;
+        }
+        button {
+            margin: 200px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="ani-txt-a">Hello World!</h2>
+    <button class="ani-btn-b">Hello World!</button>
+</body>
+</html>
+```
 ## License
 
 ani.css is licensed under the [MIT License](LICENSE).
