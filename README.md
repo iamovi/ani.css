@@ -15,10 +15,14 @@ You can include ani.css in your project by adding the following link to your HTM
 ```html
 <button class="ani-btn-b">Hello World!</button>
 ```
+![ani-btn-b preview img](https://ik.imagekit.io/iamovi/project-ani/preview/ani-btn-b.gif?updatedAt=1701612801499)
+
 #### Text Effect:
 ```html
 <h2 class="ani-txt-a">Hello, world!</h2>
 ```
+![ani-txt-a preview img](https://ik.imagekit.io/iamovi/project-ani/preview/ani-txt-a.gif?updatedAt=1701612800510)
+
 ---
 
 class starts from a and ends at z for button:
