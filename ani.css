@@ -1,0 +1,180 @@
+/* hey hello */
+
+/* ani-btn-a */
+.ani-btn-a {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px;
+    border: none;
+    transition: 0.3s all ease;
+    background: linear-gradient(
+        45deg,
+        #ff6b6b,
+        #feca57,
+        #ff9ff3,
+        #48dbfb,
+        #1dd1a1,
+        #f368e0
+      );
+}
+.ani-btn-a:hover {
+    color: white;
+}
+
+/* ani-btn-b */
+.ani-btn-b {
+    background: linear-gradient(
+        45deg,
+        #ff6b6b,
+        #feca57,
+        #ff9ff3,
+        #48dbfb,
+        #1dd1a1,
+        #f368e0
+      );
+      background-size: 600% 600%;
+      cursor: pointer;
+      border: none;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+      font-weight: bold;
+      color: black;
+      border-radius: 5px;
+      overflow: hidden;
+      animation: ani-btn-b-gradientAnimation 15s ease infinite,
+      ani-btn-b-rainbowAnimation 7s linear infinite;
+}
+@keyframes ani-btn-b-rainbowAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+@keyframes ani-btn-b-fireAnimation {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 165, 0, 0.8), 0 0 80px rgba(255, 255, 255, 0.4);
+    }
+}
+  
+.ani-btn-b:hover {
+    animation: ani-btn-b-fireAnimation 0.5s ease infinite;
+    background: linear-gradient(45deg, #ff0000, #ff6600);
+    color: white;
+}
+
+
+/* ani-btn-c */
+.ani-btn-c {
+    padding: 10px 17px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.ani-btn-c:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+
+/* ani-btn-d */
+.ani-btn-d {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: orange;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .ani-btn-d:hover {
+    background-color: #2980b9;
+  }
+
+  .ani-btn-d::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #fff 0%, #fff 10%, transparent 20%, transparent 100%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .ani-btn-d:hover::before {
+    opacity: 1;
+    transform: scale(2);
+  }
+
+  .ani-btn-d::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    mix-blend-mode: overlay;
+  }
+
+
+/* ani-btn-e */
+.ani-btn-e {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.ani-btn-e::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.ani-btn-e:hover::before {
+  transform-origin: 0 50%;
+  transform: scaleX(1);
+}
+.ani-btn-e:hover {
+  color: #3498db;
+}
