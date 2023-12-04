@@ -82,63 +82,55 @@ body {
     background-color: #eee;
     border-radius: 6px;
 }
+.toggle-button {
+    display: none;
+}
 
 
-    /* Media query for mobile devices */
-    @media (max-width: 768px) {
-    .effects-list, .effects-list-2 {
-        display: none;
-    }
-
-    .toggle-button {
-        display: block;
-        margin: 10px;
-    }
-    .effects-list,
-    .effects-list-2 {
-        width: 120px;
-    }
-    .for-post1 {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-    }
-    .for-post2 {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-    }
-    .container h2 {
-        font-size: 19px;
-    }
-    #kool {
-        font-size: 20px;
-        padding-top: 5px;
-        border-top: 0.5px solid black;
-    }
-    .pro {
-        font-size: 25px;
-    }
-    .effects-list {
-        left: 1%;
-    }
     
-    .effects-list-2 {
-        right: 1%;
-    }
-    }
-
-    /* Media query for larger screens (PC screens) */
-    @media (min-width: 769px) {
-    .effects-list, .effects-list-2 {
-        display: flex;
-    }
-
-    .toggle-button {
-        display: none;
-    }
-
-    }
+    @media only screen and (max-width: 600px) {
+        .effects-list, .effects-list-2 {
+            display: none;
+        }
+    
+        .toggle-button {
+            display: block;
+            margin: 10px;
+        }
+        .effects-list,
+        .effects-list-2 {
+            width: 120px;
+        }
+        .for-post1 {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        .for-post2 {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        .container h2 {
+            font-size: 19px;
+        }
+        #kool {
+            font-size: 20px;
+            padding-top: 5px;
+            border-top: 0.5px solid black;
+        }
+        .pro {
+            font-size: 25px;
+        }
+        .effects-list {
+            left: 1%;
+        }
+        
+        .effects-list-2 {
+            right: 1%;
+        }
+        }
+      
 
 /* how to use ? */
 
