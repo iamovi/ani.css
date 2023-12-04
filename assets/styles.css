@@ -140,9 +140,11 @@ body {
         }
       
 
-/* how to use ? */
 
-.how {
-    font-size: 20px;
-    margin-top: 20px;
-}
+        .iconyo {
+            cursor: pointer;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+            
+          }

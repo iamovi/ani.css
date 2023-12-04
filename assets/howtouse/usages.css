@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 960px; /* Change width to max-width */
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  .cdn {
+    display: block;
+    padding: 6px;
+    font-size: 20px;
+    overflow-x: auto; /* Add overflow-x property */
+  }
+  
+  /* Optional: Make the code block more readable on small screens */
+  code {
+    white-space: pre-wrap;
+  }
+  
+  .copy-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below the image */
+    border-radius: 5px;
+  }
+
+  .iconyo {
+    cursor: pointer;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+  }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ani.css usages</title>
+    <link rel="icon" href="../favicon/ani.css-16.png">
+    <link rel="icon" href="../favicon/ani.css-32.png">
+    <link rel="icon" href="../favicon/ani.css-96.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./usages.css">
+</head>
+<body>
+
+  <div class="container">
+    <a href="https://github.com/iamovi/ani.css" target="_blank" class="fab fa-github github-icon iconyo">gh REPO</a>
+
+    <!-- Your content goes here -->
+    <h1>Project - ani.css</h1>
+    <p>ani.css is a lightweight CSS library that provides animations and effects for buttons and text elements. Easily enhance the visual appeal of your web projects with ani.css.</p>
+    <hr>
+
+    <code id="codeSnippet" class="cdn">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css"&gt;</code>
+    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+    <br><br>
+    > Copy and paste the CDN on your html head tag.
+    <br><br>
+    <h2>*Next step to implement ani.css text and button animations in your project!</h2>
+    <br>
+    <p>>Text animations ></p>
+    <img src="https://ik.imagekit.io/iamovi/project-ani/preview/txt-preview.png?updatedAt=1701691544333" alt="txt preview">
+    <span>👇</span>
+    <img src="https://ik.imagekit.io/iamovi/project-ani/preview/ani-txt-a.gif?updatedAt=1701612800510" alt="preview image">
+    <br><br>
+    <p>>Button animations ></p>
+    <img src="https://ik.imagekit.io/iamovi/project-ani/preview/btn-preview.png?updatedAt=1701691544070" alt="btn preview">
+    <span>👇</span>
+    <img src="https://ik.imagekit.io/iamovi/project-ani/preview/ani-btn-b.gif?updatedAt=1701612801499" alt="preview image">
+    <h4 style="text-transform: uppercase;">> simply add ani class name to your texts or buttons <</h4>
+    <h1>Check Out All animations and effects <a href="../../index.html">Click here!</a> </h1>
+  </div>
+
+
+
+
+  <script>
+    function copyCode() {
+        // Get the code element
+        var codeElement = document.getElementById("codeSnippet");
+  
+        // Create a range to select the text inside the code element
+        var range = document.createRange();
+        range.selectNode(codeElement);
+  
+        // Create a selection and select the range
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+  
+        // Copy the selected text to the clipboard
+        document.execCommand("copy");
+  
+        // Deselect the text
+        selection.removeAllRanges();
+  
+        // Display "Copied!" in the button for 1 second
+        var button = document.querySelector("button");
+        button.innerText = "Copied!";
+        setTimeout(function() {
+          button.innerText = "Copy Code";
+        }, 1000);
+      }
+  </script>
+</body>
+</html>
