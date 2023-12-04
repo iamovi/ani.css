@@ -1,6 +1,6 @@
 {
   "name": "ani.css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ani.css - A CSS Library for Button and Text Animations & Effects.",
   "main": "dist/ani.min.css",
   "scripts": {

@@ -7,7 +7,7 @@ ani.css is a lightweight CSS library that provides animations and effects for bu
 You can include ani.css in your project by adding the following link to your HTML file:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.1/dist/css/ani.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css">
 ```
 ## Examples
 
@@ -47,7 +47,7 @@ Explore the [ani.css website](https://iamovi.github.io/ani.css/) for a full list
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ani.css</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.1/dist/css/ani.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css">
     <style>
         h2 {
             margin-top: 10%;
