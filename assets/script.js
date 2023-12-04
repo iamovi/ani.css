@@ -41,7 +41,7 @@ function applyEffect(className) {
 
     // Check if the class is for changing the text of the <p> tag
     if (className.startsWith('ani-btn') || className.startsWith('ani-txt')) {
-        pTag.textContent = 'Cool Now!';
+        pTag.textContent = 'Looks Kool Now!';
     }
 }
 
