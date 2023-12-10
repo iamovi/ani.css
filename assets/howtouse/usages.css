@@ -14,8 +14,7 @@ body {
   }
   
 .container h1 {
-    position: sticky;
-    top: 0;
+    
 }
   .cdn {
     display: block;
