@@ -76,3 +76,9 @@ img {
     text-decoration: none;
     color: black;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+.hola {
+  font-family: 'Whisper', cursive;
+  text-align: center;
+}
