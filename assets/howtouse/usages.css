@@ -21,6 +21,7 @@ body {
   top: 0;
   background-color: #f0f0f0; /* Add background color if needed */
   z-index: 100; /* Add a higher z-index to ensure it appears above other elements */
+padding : 4.5px 0px;
 }
 
 
