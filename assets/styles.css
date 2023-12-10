@@ -153,3 +153,9 @@ body {
 .how {
     color: #4CAF50;
 }
+
+.for-post1,
+.for-post2 {
+    background-color: #4CAF50;
+    padding: 5px;
+}
