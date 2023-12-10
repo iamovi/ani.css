@@ -12,6 +12,7 @@ body {
 .pro {
     font-family: RubikBubbles;
     text-align: center;
+    color: #4CAF50;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
