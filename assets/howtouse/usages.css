@@ -2,61 +2,76 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    max-width: 960px; /* Change width to max-width */
+}
+
+.container {
+    max-width: 960px;
     margin: 0 auto;
     background-color: #f0f0f0;
     padding: 20px;
     margin-top: 40px;
     border-radius: 5px;
-  }
-  
-
-
-
-.container h1 {
-  position: sticky;
-  top: 0;
-  background-color: #f0f0f0; /* Add background color if needed */
-  z-index: 100; /* Add a higher z-index to ensure it appears above other elements */
-padding : 4.5px 0px;
 }
 
+.container h1 {
+    position: sticky;
+    top: 0;
+    background-color: #f0f0f0;
+    z-index: 100;
+    padding: 4.5px 0px;
+}
 
-
-
-
-  .cdn {
+.cdn {
     display: block;
-    padding: 6px;
-    font-size: 20px;
-    overflow-x: auto; /* Add overflow-x property */
+    max-width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    overflow-x: auto;
+    background-color: #4CAF50; /* Matching the button's background color */
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.cdn:hover {
+    background-color: #45a049; /* Adjusted hover color to match the button's hover color */
+}
+@media only screen and (max-width: 600px) {
+  .cdn{
+    max-width: 100%;
   }
-  
-  /* Optional: Make the code block more readable on small screens */
-  code {
+}
+
+code {
     white-space: pre-wrap;
-  }
-  
-  .copy-btn {
+}
+
+.copy-btn {
     display: inline-block;
     cursor: pointer;
-    padding: 7px;
-    margin-left: 10px;
+    padding: 15px 15px;
     margin-top: 10px;
-  }
-  img {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.7s ease;
+}
+
+.copy-btn:hover {
+    background-color: #45a049;
+}
+
+img {
     max-width: 100%;
     height: auto;
-    display: block; /* Remove extra space below the image */
+    display: block;
     border-radius: 5px;
-  }
+}
 
-  .iconyo {
+.iconyo {
     cursor: pointer;
     font-size: 40px;
     text-decoration: none;
     color: black;
-  }
+}
