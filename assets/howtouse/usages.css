@@ -20,7 +20,6 @@ body {
   position: sticky;
   top: 0;
   background-color: #f0f0f0; /* Add background color if needed */
-  padding: 10px; /* Add padding for better visibility */
   z-index: 100; /* Add a higher z-index to ensure it appears above other elements */
 }
 
