@@ -77,10 +77,12 @@ img {
     color: black;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 .hola {
   display: block;
   width: 100%;
-  font-family: 'Whisper', cursive;
+  font-family: 'Shadows Into Light', cursive;
   text-align: center;
 }
